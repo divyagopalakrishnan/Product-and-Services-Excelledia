@@ -25,29 +25,31 @@ class _AddProductState extends State<AddProduct> {
   }
 
   Widget _scaffoldBody() {
-    return Center(
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.87,
-        width: MediaQuery.of(context).size.width * 0.87,
-        decoration: const BoxDecoration(
-          color: Color(0xFF5C5B5B),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _closeIcons(),
-            _title(),
-            const SizedBox(
-              height: 20,
-            ),
-            _stepperDesigns(),
-            _productName(),
-            _detailsText(),
-            _chooseIcon(),
-            const Spacer(),
-            _nextButton()
-          ],
+    return SingleChildScrollView(
+      child: Center(
+        child: Container(
+          height: MediaQuery.of(context).size.height * 0.93,
+          width: MediaQuery.of(context).size.width * 0.87,
+          decoration: const BoxDecoration(
+            color: Color(0xFF5C5B5B),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              _closeIcons(),
+              _title(),
+              const SizedBox(
+                height: 20,
+              ),
+              _stepperDesigns(),
+              _productName(),
+              _detailsText(),
+              _chooseIcon(),
+              const Spacer(),
+              _nextButton()
+            ],
+          ),
         ),
       ),
     );
