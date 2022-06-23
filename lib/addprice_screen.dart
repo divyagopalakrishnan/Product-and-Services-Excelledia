@@ -166,10 +166,10 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
 
   Widget _ButtonStyle(){
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
       children: [
         Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(16.0),
           child: SizedBox(
             height: 40,
             width: 140,
@@ -193,9 +193,9 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
             ),
           ),
         ),
-        const SizedBox(),
+
         Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(5.0),
           child: SizedBox(
             height: 40,
             width: 140,
