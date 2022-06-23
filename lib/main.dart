@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'New Project',
       darkTheme: ThemeData.dark(),
-      home:  ProductAndServiceScreen(),
+      home:  const ProductAndServiceScreen(),
     );
   }
 }

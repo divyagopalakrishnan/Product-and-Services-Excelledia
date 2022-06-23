@@ -18,13 +18,12 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
   int activeStep = 0;
   int dotCount = 4;
   double _value = 40.0;
-  RangeValues _currentRangeValues = const RangeValues(80, 120);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF313131),
-
       body: _scaffoldBody(),
     );
   }
@@ -79,7 +78,7 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
         padding: const EdgeInsets.all(12.0),
         child: ClipOval(
           child: Material(
-            color: Color(0xFF313131),
+            color: const Color(0xFF313131),
             child: InkWell(
               onTap: () {
                 Navigator.pushReplacement(
@@ -164,7 +163,6 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
 
     );
   }
-  //new 
 
   Widget _ButtonStyle(){
     return Row(
@@ -195,7 +193,7 @@ class _AddPriceScreenState extends State<AddPriceScreen> {
             ),
           ),
         ),
-        SizedBox(),
+        const SizedBox(),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: SizedBox(

@@ -20,13 +20,13 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF313131),
+      backgroundColor: const Color(0xFF313131),
       appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white),
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () {},
           ),
-          backgroundColor: Color(0xFF313131),
+          backgroundColor: const Color(0xFF313131),
           centerTitle: true,
           title: const Text("PRODUCTS & SERVICES")),
       body: _scaffoldBody(),
@@ -48,13 +48,13 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               _tabBarDesign(),
-              SizedBox(height: 120,),
+              const SizedBox(height: 120,),
               _circleWithProduct(),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               _title(),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               _subtitle(),
-              SizedBox(height: 40,),
+                const Spacer(),
               _addNowButton(),
 
             ],
@@ -70,17 +70,17 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
       child: Stack(
         children: [
           DottedBorder(
-            dashPattern: [10, 10],
+            dashPattern: const [10, 10],
             strokeWidth: 2,
             strokeCap: StrokeCap.round,
-            color: Color(0xFF959595),
+            color: const Color(0xFF959595),
             borderType: BorderType.Circle,
             child: Stack(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: DottedBorder(
-                    dashPattern: [10, 10],
+                    dashPattern: const [10, 10],
                     strokeWidth: 2,
                     strokeCap: StrokeCap.round,
                     color: const Color(0xFF959595),
@@ -125,7 +125,7 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
                     color: Colors.amberAccent,
                     width: 2
                 ) : null,
-                color: _selectedIndex == 0 ? Colors.black : Color(0xFF959595),
+                color: _selectedIndex == 0 ? Colors.black : const Color(0xFF959595),
                 borderRadius: const BorderRadius.only(topLeft: Radius.circular(20.0)),
               ),
               width: MediaQuery.of(context).size.width * 0.42,
@@ -161,12 +161,12 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
                 border: _selectedIndex == 1 ?Border.all(
                     color: Colors.amberAccent,
                     width: 2):null,
-                color: _selectedIndex == 1 ?  Colors.black : Color(0xFF959595),
-                borderRadius: BorderRadius.only(topRight: Radius.circular(20.0)),
+                color: _selectedIndex == 1 ?  Colors.black : const Color(0xFF959595),
+                borderRadius: const BorderRadius.only(topRight: Radius.circular(20.0)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Icon(Icons.admin_panel_settings,
                     color: Colors.white,
                     size: 14,
@@ -185,8 +185,6 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
       ),
     );
   }
-
-
 
   Widget _title(){
     return Center(
@@ -231,7 +229,7 @@ class _ProductAndServiceScreenState extends State<ProductAndServiceScreen> {
             MaterialPageRoute(builder: (context) => const AddPriceScreen()),
           );
         },
-        child: Text(
+        child: const Text(
           'ADD NOW',
           style: TextStyle(
             fontSize: 16,
